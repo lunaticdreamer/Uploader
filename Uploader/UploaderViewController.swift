@@ -9,13 +9,10 @@ class UploaderViewController: UIViewController, URLSessionDelegate, URLSessionTa
   var responseData = Data()
   @IBOutlet weak var progressView: UIProgressView!
   
-  lazy var sampleImageURLs: [URL] = Bundle.main.urls(forResourcesWithExtension: "jpg",
-                                                     subdirectory: nil) ?? []
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let path = Bundle.main.url(forResource: "swift", withExtension: "jpg")
+    let path = Bundle.main.url(forResource: "swift", withExtension: "png")
     let data: Data = try! Data(contentsOf: path!)
     
     var request = URLRequest(url: URL(string: "http://c66e380731f2.ngrok.io/swift.jpg")!)

@@ -18,7 +18,7 @@ class Handler(BaseHTTPServer.BaseHTTPRequestHandler):
         print(length[0])
         if ctype == 'application/x-www-form-urlencoded':
             qs = self.rfile.read(int(length[0]))
-            fout = file(os.path.join('/Users/stevenrockarts/Desktop', 'swift.png'), 'wb')
+            fout = file(os.path.join('/Users/steven/Desktop', 'swift.png'), 'wb')
             fout.write (qs)
             fout.close()
         self.do_GET()

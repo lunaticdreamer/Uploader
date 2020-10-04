@@ -15,6 +15,7 @@
 		5ABE99C325282DAE00CE5815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ABE99C125282DAE00CE5815 /* LaunchScreen.storyboard */; };
 		5ABE99CC25282DCE00CE5815 /* SimpleHTTPServerWithUpload.py in Resources */ = {isa = PBXBuildFile; fileRef = 5ABE99CB25282DCE00CE5815 /* SimpleHTTPServerWithUpload.py */; };
 		5ABE99CF25282DDE00CE5815 /* UploaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE99CE25282DDE00CE5815 /* UploaderViewController.swift */; };
+		B0EC3821252A94620051022F /* swift.png in Resources */ = {isa = PBXBuildFile; fileRef = B0EC3820252A94620051022F /* swift.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5ABE99C425282DAE00CE5815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ABE99CB25282DCE00CE5815 /* SimpleHTTPServerWithUpload.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = SimpleHTTPServerWithUpload.py; sourceTree = "<group>"; };
 		5ABE99CE25282DDE00CE5815 /* UploaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploaderViewController.swift; sourceTree = "<group>"; };
+		B0EC3820252A94620051022F /* swift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swift.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				5ABE99C425282DAE00CE5815 /* Info.plist */,
 				5ABE99CE25282DDE00CE5815 /* UploaderViewController.swift */,
 				5ABE99CB25282DCE00CE5815 /* SimpleHTTPServerWithUpload.py */,
+				B0EC3820252A94620051022F /* swift.png */,
 			);
 			path = Uploader;
 			sourceTree = "<group>";
@@ -132,6 +135,7 @@
 			files = (
 				5ABE99C325282DAE00CE5815 /* LaunchScreen.storyboard in Resources */,
 				5ABE99C025282DAE00CE5815 /* Assets.xcassets in Resources */,
+				B0EC3821252A94620051022F /* swift.png in Resources */,
 				5ABE99CC25282DCE00CE5815 /* SimpleHTTPServerWithUpload.py in Resources */,
 				5ABE99BE25282DAC00CE5815 /* Main.storyboard in Resources */,
 			);
