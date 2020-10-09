@@ -19,7 +19,7 @@ struct AudioPlayer: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {
-        
+
     }
 
     let songUrl: URL
