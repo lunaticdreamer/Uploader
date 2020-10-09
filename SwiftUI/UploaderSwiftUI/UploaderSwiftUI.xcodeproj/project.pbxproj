@@ -14,6 +14,7 @@
 		5ACB293D252F7B12006568B5 /* UploaderSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB293C252F7B12006568B5 /* UploaderSwiftUITests.swift */; };
 		5ACB2948252F7B12006568B5 /* UploaderSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB2947252F7B12006568B5 /* UploaderSwiftUIUITests.swift */; };
 		B0FACD0D2530119A0045E330 /* SongDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FACD0C2530119A0045E330 /* SongDownload.swift */; };
+		B0FACD12253019160045E330 /* SongDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FACD11253019160045E330 /* SongDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5ACB2947252F7B12006568B5 /* UploaderSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploaderSwiftUIUITests.swift; sourceTree = "<group>"; };
 		5ACB2949252F7B12006568B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0FACD0C2530119A0045E330 /* SongDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDownload.swift; sourceTree = "<group>"; };
+		B0FACD11253019160045E330 /* SongDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				5ACB2933252F7B12006568B5 /* Info.plist */,
 				5ACB2930252F7B12006568B5 /* Preview Content */,
 				B0FACD0C2530119A0045E330 /* SongDownload.swift */,
+				B0FACD11253019160045E330 /* SongDetailView.swift */,
 			);
 			path = UploaderSwiftUI;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0FACD12253019160045E330 /* SongDetailView.swift in Sources */,
 				B0FACD0D2530119A0045E330 /* SongDownload.swift in Sources */,
 				5ACB292D252F7B0E006568B5 /* ContentView.swift in Sources */,
 				5ACB292B252F7B0E006568B5 /* UploaderSwiftUIApp.swift in Sources */,
