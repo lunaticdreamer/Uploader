@@ -10,9 +10,18 @@ import SwiftUI
 class SongDownload : NSObject, ObservableObject {
     var downloadTask: URLSessionDownloadTask?
     var downloadURL: URL?
+    var resumeData: Data?
+
     @Published var downloadLocation: URL?
     @Published var downloadedAmount: Float = 0
-    @Published var isDownloading = false
+    @Published var state: DownloadState = .waiting
+
+    enum DownloadState {
+        case waiting
+        case downloading
+        case paused
+        case finished
+    }
 
     lazy var urlSession: URLSession = {
         let configuration = URLSessionConfiguration.default
@@ -23,7 +32,34 @@ class SongDownload : NSObject, ObservableObject {
         downloadURL = item
         downloadTask = urlSession.downloadTask(with: item)
         downloadTask?.resume()
-        isDownloading = true
+        state = .downloading
+    }
+
+    func cancel() {
+        state = .waiting
+        downloadTask?.cancel()
+        DispatchQueue.main.async {
+            self.downloadedAmount = 0
+        }
+    }
+
+    func pause() {
+        downloadTask?.cancel(byProducingResumeData: {data in
+            DispatchQueue.main.async {
+                self.resumeData = data
+                self.state = .paused
+            }
+        })
+    }
+
+    func resume() {
+        guard let resumeData = self.resumeData else {
+            return
+        }
+
+        downloadTask = self.urlSession.downloadTask(withResumeData: resumeData)
+        downloadTask?.resume()
+        state = .downloading
     }
 }
 
@@ -50,6 +86,7 @@ extension SongDownload: URLSessionDownloadDelegate {
             try fileManager.copyItem(at: location, to: destinationUrl)
             DispatchQueue.main.async {
                 self.downloadLocation = destinationUrl
+                self.state = .finished
             }
         } catch {
             print(error)
@@ -62,8 +99,5 @@ extension SongDownload: URLSessionDownloadDelegate {
             print(error.localizedDescription)
         }
 
-        DispatchQueue.main.async {
-            self.isDownloading = false
-        }
     }
 }
